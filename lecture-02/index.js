@@ -9,7 +9,7 @@
         //     )
         // }
     // for jsx- more readibility: and this is also called Functional Component
-    const Button = ({name, number}) =>{
+    const Button = ({name, number}) =>{     //  this way of writing is also known as destructuring
         return(
             <button>{name},{number}</button>
         )
@@ -73,16 +73,36 @@
 // implementing class component:
     // lets say we want to make a TODO list:
 
-    class TodoList extends React.Component {   // way to write class based components and here also the name of the class should begin with capital
-        random(){
-            return (
-                <div>just an eg to check how class compn works</div>
-            ) 
-        }
-    }
+    // class TodoList extends React.Component {   // way to write class based components and here also the name of the class should begin with capital
+    //     random(){
+    //         return (
+    //             <div>just an eg to check how class compn works</div>
+    //         ) 
+    //     }
+    // }
 
-    ReactDOM.render(new TodoList().random(), document.getElementById('root')) // to render a class component: 
+    // ReactDOM.render(new TodoList().random(), document.getElementById('root')) // to render a class component: 
     /// a> make a class, eg like todolist 
     /// b> create an instance of it like in line no 84 while rendering 
     /// c> and then call the method which is returning the JSX inside
+
+    // One more way of rendering the class component:
+    class TodoList extends React.Component{
+        render(){
+            return (
+                <div> another way of rendering the class component
+                    {this.random()}
+                </div> 
+                
+            )
+           
+        }
+        random(){
+            return (
+                <p>ok payal</p>
+            )
+        }
+        
+    }
+    ReactDOM.render(<TodoList/>, document.getElementById('root'))
 

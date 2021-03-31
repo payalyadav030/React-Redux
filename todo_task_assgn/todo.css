@@ -1,0 +1,21 @@
+.Each-Item{
+    width: 200px;
+    height: 160px;
+    /* padding: 2px; */
+    margin: 8px;
+    /* border:2px gray; */
+    border: 1.5px solid rgb(225, 228, 233);
+    /* border-width: 2px; */
+    border-radius: 4%;
+    
+}
+.todo-Items{
+    background-color: ghostwhite;
+    margin-left: 113px;
+    padding: 7px;
+    display: flex;
+    width: 87%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}

@@ -1,0 +1,33 @@
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+.wrapperDiv{
+    height: 300px;
+    width: 35%;
+    background-color:#fdfbfb;
+    
+    
+}
+.inputDiv{
+    width: 100%;
+}
+/* .inputDiv{
+    background-color:#fdfbfb;
+    margin-top: 28px;
+    width: 420px;
+} */
+.title{
+    height: 20px;
+    /* padding: 2px; */
+    margin:6px;
+}
+.date{
+    height: 20px;
+    margin:6px;
+}
+.saveBtn{
+    background-color: #4CAF50;
+    color:white;
+    font-size: 16px;
+}
