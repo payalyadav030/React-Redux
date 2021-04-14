@@ -34,34 +34,48 @@ class Input extends React.Component{
    }
     render(){
         return(
-            <div>
-                <input onChange={(event)=>this.handleTitleChange(event)} value = {this.state.title} type="text" placeholder="title"></input>
-                <input onChange={(event)=>this.handleDescriptionChange(event)} value={this.state.description} type="text" placeholder="description" ></input>
-                <button onClick={()=>this.sendTodoToWrapper()} type="button">Add</button>
+            <div className="add-todos">
+                <h3>Add your Todos here</h3>
+                <input onChange={(event)=>this.handleTitleChange(event)} value = {this.state.title} type="text" placeholder="title" className="title"></input>
+                <input onChange={(event)=>this.handleDescriptionChange(event)} value={this.state.description} type="text" placeholder="description" className="description" ></input>
+                <button onClick={()=>this.sendTodoToWrapper()} type="button" className="saveBtn">Add</button>
 
-                <div>Welcome back Michael</div>
+               
             </div>
         )
     }
 }
+// style={{color:color}}
 class List extends React.Component{
     
     render(){
+        // var color=['red', 'green', 'blue', 'orange', 'yellow']
+       
+        //  var color='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+        // console.log(color)
         return(
-            <div className="todo-Items">
-              
-                {this.props.todos.map((todo, index)=>{
+            <div className="todo-Item">
+                 <p className="heading">
+                     Welcome back Michael
+                 </p>
+                 <div className="todo-Items" >
+                 {this.props.todos.map((todo, index)=>{
+                      var applyColor = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
                     return(
                         
-                        <div className="Each-Item" key={index}>
+                        <div className="Each-Item" key={index} style={{borderTop:`2px solid ${applyColor}`}} >
                             
-                            <h2 key={index}>{todo.title}</h2> 
+                            <h2 key={index} style={{color:applyColor}} >{todo.title}</h2> 
                             <p> {todo.description}</p>
-                            <button onClick={()=>this.props.editTodo(index)} type="button">Edit</button>
-                            <button onClick={()=>this.props.deleteTodo(index)} type="button">Delete</button>
+                            <div className="buttons">
+                                <button onClick={()=>this.props.editTodo(index)} type="button" class="btn btn-primary">Edit</button>
+                                <button onClick={()=>this.props.deleteTodo(index)} type="button" class="btn btn-danger">Delete</button>
+                            </div>
+                            
                         </div>
                     ) 
                 })}
+                 </div>
             </div>
         )
     }
@@ -71,37 +85,38 @@ class Wrapper extends React.Component{
     state={
         todos:[
             {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
+                title:"operation",
+                description:"finals the list"
             },
             {
-                title:"Operations",
-                description:"Finalise the sales plan for new product marketing."
+                title:"management",
+                description:"chek the list "
+            },{
+                title:"sales",
+                description:"how much profit"
+            },{
+                title:"marketing",
+                description:"check the stock list"
             },
             {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
+                title:"marketing",
+                description:"check the stock list"
             },
             {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
+                title:"marketing",
+                description:"check the stock list"
             },
             {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
+                title:"marketing",
+                description:"check the stock list"
             },
             {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
+                title:"marketing",
+                description:"check the stock list"
             },
-            {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
-            },
-            {
-                title:"Management",
-                description:"Finalise the sales plan for new product marketing."
-            },
+    
+
+
 
         ],
         isEdit:false,
