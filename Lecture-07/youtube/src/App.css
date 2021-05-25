@@ -1,0 +1,64 @@
+.App{
+  display:flex;
+  flex-direction: column;
+}
+.page-wrapper{
+  display: flex;
+  width: 33%;
+}
+.width-30{
+  width: 100%;
+  /* height: 20px; */
+}
+.width-30{
+  list-style-type: none;
+}
+/* .width-30 li{
+  width: 40px;
+  height: 30px;
+} */
+.width-40{
+  width: 40%;
+  padding: 10px;
+}
+.width-80{
+  width: 80%;
+}
+/* .width-100{
+  width: 100%;
+  /* height: 500px; 
+} */
+.played-bookmarked{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-class{
+  width: 100%;
+  background-color: blueviolets;
+  height: 50px;
+}
+.video-player{
+  width: 65%;
+  position: absolute;
+  right: 2px;
+  top: 60px;
+}
+.video-img-div{
+  width: 98%;
+    height: 90px;
+    border: 2px solid;
+}
+.listItem{
+  padding: 5px;
+  list-style: none;
+}
+.played-bookmarked{
+  position: absolute;
+    top: 61%;
+    right: 20%;
+    width: 45%;
+}
+/* .image{
+  width: 40px;
+} */

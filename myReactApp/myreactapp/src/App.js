@@ -50,7 +50,7 @@ class Input extends React.Component{
           <h3>Add your todos here</h3>
           <input onChange={(event)=>this.handleTitleChange(event)} value={this.state.title} placeholder="Title"></input>
           <input onChange={(event)=>this.handleDeadlineChange(event)} value={this.state.deadline} placeholder="Deadline"></input>
-          <input onChange={(event)=>this.handleCompletedChange(event)} value={this.state.isCompleted} placeholder="current state"></input>
+          <input onChange={(event)=>this.handleCompletedChange(event)} value={this.state.isCompleted} placeholder="Status"></input>
           <button onClick={()=>this.sendTodoToApp()} className="btn btn-success">Add</button>
         </div>
     )
