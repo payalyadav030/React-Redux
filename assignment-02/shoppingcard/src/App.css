@@ -1,0 +1,108 @@
+.header{
+  display: flex;
+  justify-content: center;
+  background-color:#23a3f3;
+  
+}
+.header h2{
+  text-align: center;
+  width: 40%;
+  height: 50px;  
+}
+.Items-ul{
+  list-style: none;
+}
+.items-Divs{
+  width: 57%;
+  margin:15px;
+  background-color: lightgreen;
+  border-radius: 3%;
+ 
+}
+ .items-li{ 
+  display: flex;
+  flex-direction: column;  
+}
+.items-li p{
+  font-size: large;
+  font-weight: 700;
+  padding: 6px;
+  
+}
+.cost{
+  font-weight: 600;
+  padding: 6px;
+}
+.add-button{
+  position: relative;
+  left: 190px;
+  width: 37%;
+  bottom: 8px;
+}
+ .components{
+  display: flex;
+} 
+.Items-Comp{
+  width: 43%;
+}
+.Items-Comp h3{
+  position: relative;
+  left: 141px;
+}
+.Cart-Comp{
+  width: 35%;
+}
+.cart-div-2{
+  height: 136px;
+  width: 69%;
+  border-radius: 2%;
+  margin: 7px;
+  background-color: lightblue;
+  position: relative;
+  top: -11px;
+}
+.ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 99%;
+  margin: 2px;
+  padding: 2px;
+}
+
+
+.cart-div-4 p{
+  font-size: large;
+  font-weight: 700;
+  padding: 7px;
+  position: relative;
+  top: -14px;
+}
+.remove-btn{
+  position: relative;
+  left: 235px;
+  bottom: -3px;
+  width: 25%;
+}
+.total-comp{
+  width: 22%;
+}
+.cart-div h3{
+  position: relative;
+  left: 133px;
+  width: 67px
+}
+.cart-cost{
+  font-weight: 600;
+  padding: 8px;
+  position: relative;
+  top: -6px
+}
+.totalcost{
+  font-weight: bolder;
+  font-size: xx-large;
+  color:forestgreen;
+}
+.main-div{
+  background-color:gainsboro;
+}
